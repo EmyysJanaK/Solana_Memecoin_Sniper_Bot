@@ -5,9 +5,15 @@ interface Props {
     handleSwitch: Function
 }
 
+import React from 'react';
+
 export const ColorSwitch: FC<Props> = ({ isSwitch, handleSwitch }) => {
     return (
-        <div className={isSwitch ? `border-bright shadow-[0_0_5px_5px_green] rounded-[50%] bg-green w-4 h-4 cursor-pointer` : `shadow-[0_0_5px_5px_red] border-bright  rounded-[50%] w-4 h-4 bg-warning cursor-pointer`} onClick={() => handleSwitch()}></div>
-
-    )
-}
+        <div
+            className={`border-bright rounded-[50%] w-4 h-4 cursor-pointer ${
+                isSwitch ? 'shadow-[0_0_5px_5px_green] bg-green' : 'shadow-[0_0_5px_5px_red] bg-warning'
+            }`}
+            onClick={() => handleSwitch()}
+        ></div>
+    );
+};
