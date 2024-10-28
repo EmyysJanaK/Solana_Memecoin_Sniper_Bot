@@ -16,6 +16,7 @@ import { getWalletTokenAccount, swapOnlyAmm } from "../../utils/swap";
 import { execute } from "../../track/raydium/executor/legacy";
 import { solTransfer } from "../../minting/utils";
 
+
 // rpc set
 export let net: 'mainnet' | 'devnet' = 'mainnet'
 
